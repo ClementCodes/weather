@@ -1,0 +1,22 @@
+.navBar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  border: 1px solid grey;
+  height: 40px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  form {
+    color: cornsilk;
+  }
+  input {
+    margin-top: 3px;
+    height: 35px;
+    background-color: rgb(160, 167, 167);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+
+    font-style: whites;
+  }
+}
