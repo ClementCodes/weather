@@ -1,17 +1,23 @@
 import React from 'react';
-import Neumorphism from '../components/Card-neumorphism';
+import WeatherCard from '../components/WeatherCard';
 import NavBar from '../components/NavBar';
 
 const Home = () => {
+
+
+    console.log("hello");
     return (
         <div className="home">
-            <NavBar/>
-            <Neumorphism city="London"/>
-            <Neumorphism city="Paris" />
-            <Neumorphism city="Bordeaux"/>
-            <Neumorphism city="Madrid"/>
-            <Neumorphism city="Austell"/>
-            <Neumorphism city="Montevideo"/>
+            <NavBar />
+            
+            <div>
+                <WeatherCard city="London" id="id" />
+                </div>
+            <WeatherCard city="Paris" id="id" />
+            <WeatherCard city="Bordeaux" id="id"/>
+            <WeatherCard city="Madrid" id="id"/>
+            <WeatherCard city="Austell" id="id"/>
+            <WeatherCard city="Montevideo" id="id"/>
         </div>
     );
 };

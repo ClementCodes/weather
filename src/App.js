@@ -1,16 +1,17 @@
 import Home from './pages/Home';
-import {  Switch, Route } from "react-router-dom";
+import {BrowserRouter as Router,  Switch, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound"
+import WeatherDetail from './pages/WeatherDetail';
 function App() {
   return (
-    <Switch>
-    <Route exact path="/" component={Home} />
-    {/* <Route exact path="/projetflag" component={ProjetFlag} />
-    <Route exact path="/Formulaire" component={Formulaire} />
-    <Route exact path="/test" component={PageTest} /> */}
-
-    <Route component={NotFound} />
-  </Switch>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+       
+        <Route  path="/weathers/:id" component={WeatherDetail} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 
