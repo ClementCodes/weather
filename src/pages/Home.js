@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // import WeatherCard from '../components/WeatherCard';
 import NavBar from '../components/NavBar';
 import Fetch from 'react-fetch';
@@ -8,18 +8,22 @@ import WeatherCard from "../components/WeatherCard";
 
 const Home = () => {
 
-  
-
-
-            return (
-<>
-                <WeatherCard  city= "Paris" />
-                <WeatherCard  city= "Bordeaux" />
-               </>
-              
-            )
+    // const [ville, setVille] = useState()
     
-                
-}
+    let villes = ["london","Paris", "Bordeaux", "Lyon"]
+   
+
+    return (
+        <>
+            {villes.map((ville, index) => {
+                return (    
+                    <WeatherCard key={index} city={ville} />
+                    // <p>{ville}</p>
+                    
+                )
+            })}
+        </>
+    )
+};
     
 export default Home
