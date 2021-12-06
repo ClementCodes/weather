@@ -1,25 +1,25 @@
-import React from 'react';
-import WeatherCard from '../components/WeatherCard';
+import React, { useEffect } from 'react';
+// import WeatherCard from '../components/WeatherCard';
 import NavBar from '../components/NavBar';
+import Fetch from 'react-fetch';
+import { Link ,useHistory } from 'react-router-dom';
+import {useQuery} from 'react-query';
+import WeatherCard from "../components/WeatherCard";
 
 const Home = () => {
 
+  
 
-    console.log("hello");
-    return (
-        <div className="home">
-            <NavBar />
-            
-            <div>
-                <WeatherCard city="London" id="id" />
-                </div>
-            <WeatherCard city="Paris" id="id" />
-            <WeatherCard city="Bordeaux" id="id"/>
-            <WeatherCard city="Madrid" id="id"/>
-            <WeatherCard city="Austell" id="id"/>
-            <WeatherCard city="Montevideo" id="id"/>
-        </div>
-    );
-};
 
-export default Home;
+            return (
+<>
+                <WeatherCard  city= "Paris" />
+                <WeatherCard  city= "Bordeaux" />
+               </>
+              
+            )
+    
+                
+}
+    
+export default Home
