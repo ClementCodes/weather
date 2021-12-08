@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useQuery } from "react-query";
 
 const WeatherCard = ({city}) => {
@@ -10,7 +9,7 @@ const WeatherCard = ({city}) => {
          return res.json()
      }
      
-  const { isLoading, data, isError } = useQuery("user", fetchUsers)
+  const { isLoading, data, isError,isFetching } = useQuery("data", fetchUsers)
   
      if (isLoading) {    
        return  <div>Chargement...</div>
@@ -41,7 +40,5 @@ const WeatherCard = ({city}) => {
       </div>
     </div>
   );
-  }
-
-
+}
 export default WeatherCard;

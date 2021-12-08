@@ -7,7 +7,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        {/* <Route  path="/weathers/:id" component={WeatherDetail} /> */}
+      {/* <Route  path="/weathers/:id" component={WeatherDetail} />  */}
         <Route component={NotFound} />
       </Switch>
     </Router>

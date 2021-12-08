@@ -4,8 +4,8 @@ import './styles/index.scss';
 import App from './App';
 
 import { HashRouter } from 'react-router-dom';
-import { QueryClient,QueryClientProvider,
-} from 'react-query';
+import { QueryClient,QueryClientProvider} from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 
 const queryClient = new QueryClient()
@@ -18,6 +18,7 @@ ReactDOM.render(
   <HashRouter>
     <App />
     </HashRouter>
+    <ReactQueryDevtools initialIsOpen={true} />
     </QueryClientProvider> ,
   document.getElementById('root')
 );
