@@ -1,36 +1,19 @@
 import WeatherCard from "../components/WeatherCard";
-
-
-
-
+import NavBar from "../components/NavBar";
 
 const Home = () => {
-  
-
- const   villes = ["Bordeaux","Paris"]
-
-const  paris = <WeatherCard  city="paris" />
-  
+    const cities = ['Paris', 'Bordeaux',"London"]
     return (
-      <>
-           
-            
-            {/* <WeatherCard  city="Paris" />
-            <WeatherCard  city="Bordeaux" /> */}
-            {villes.map((ville) => {
-                return (    
-                    <WeatherCard  city={ville} />
-                  
-                    
-                )
-            })}
-            <div>{paris}</div>
-        </>
 
-               
-               
-         
-       
+        <>
+                <NavBar/>
+            {cities.map((ville, index) => (
+                <div key={index}>
+                    <WeatherCard city={ville} />
+                   
+                </div>
+            ))}
+        </>
     )
 };
     

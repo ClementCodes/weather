@@ -12,12 +12,7 @@ const NavBar = () => {
 
             <Link  className="details" to="/weathers/:id">Pages details</Link>
 
-            <form action="hello">
-                
-        
-               <ButtonSearch></ButtonSearch>
-               
-             </form>
+         <ButtonSearch />
         </div>
     );
 };

@@ -2,24 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
 import App from './App';
-
 import { HashRouter } from 'react-router-dom';
-import { QueryClient,QueryClientProvider} from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools'
 
 
-const queryClient = new QueryClient()
+
 
 
 
 
 ReactDOM.render(
-  <QueryClientProvider client={queryClient}>
+
   <HashRouter>
     <App />
-    </HashRouter>
-    <ReactQueryDevtools initialIsOpen={true} />
-    </QueryClientProvider> ,
+  </HashRouter>,
   document.getElementById('root')
 );
 
